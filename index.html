@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <title>Pepperoni's Pizza</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav id="navbar">
+      <ul class="menu">
+        <li>
+          <a href="#" class="logo-link"><img src="./imagenes/logoPizza.png" alt="logoPizza" class="logo" /></a>
+        </li>
+        <div class="container-items">
+          <li class="item item-link"><a href="#catalogo">Catálogo</a></li>
+          <li class="item item-link">
+            <a href="#form">Contacto</a>
+          </li>
+          <li class="item">
+            <a href="">
+              <i class="fa-solid fa-cart-shopping cart"></i>
+              <span id="totalItems"></span>
+            </a>
+          </li>
+        </div>
+        <div class="btn__container">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="cabecera">
+      <div class="infoCabecera">
+        <h1>Pepperoni's</h1>
+        <p>El mejor sabor a tu casa!</p>
+      </div>
+      <img class="imgCabecera" src="./imagenes/pizza.jpg" alt="imgCabecera" />
+    </section>
+    <section class="search">
+      <div class="inputContainer">
+        <h2>Busca tu pizza </h2>
+        <h3>Ingresa su nombre</h3>
+        <form action="">
+          <input class="inputSearch" type="text" name="" id="inputSearch" />
+          <button class="inputBtn">Buscar</button>
+        </form>
+      </div>
+      <div class="cardSearch">
+        <h2 class="nombre"></h2>
+        <h4 class="precio"></h4>
+      </div>
+    </section>
+    <section class="carro">
+      <div class="cartContainer"></div>
+    </section>
+    <section class="catalogo" id="catalogo">
+    </section>
+    <!--contacto-->
+    <form class="contacto" id="form">
+      <h2>Contacto</h2>
+      <input type="text" id="name" placeholder="Ingresa tu nombre" />
+      <input type="email" name="email" id="email" placeholder="Ingresa tu email" />
+      <input type="tel" name="phone" id="phone" placeholder="Ingresa número de contacto">
+      <input type="submit" id="enviar" class="enviar" />
+      <p class="errores" id="errores"></p>
+    </form>
+    <footer class="footer">
+      <p>Juan Nuñez</p>
+    </footer>
+  </main>
+  <script src="./stock.js"></script>
+  <script src="./main.js"></script>
+</body>"
+
+</html>

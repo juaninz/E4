@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300&display=swap');
+
+
+:root {
+    /* Paleta colores */
+    --naranja: rgb(255, 159, 28);
+    --naranjasoft: rgb(255, 191, 105);
+    --blanco: rgb(255, 255, 255);
+    --negro: rgb(0, 0, 0);
+    --azul: rgb(2, 48, 71);
+    --rojo: rgb(251, 11, 11);
+    --amarillo: rgb(255, 215, 25)
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+
+
+body {
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    font-family: 'Spline Sans', sans-serif;
+    font-weight: var(--thin);
+    background: url(./imagenes/fondoPizza.jpg) repeat;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+li {
+    list-style: none;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 480px) {
+    #header {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0 2rem 0;
+        background: var(--rojo);
+        height: auto;
+        transition: top 0.5s;
+    }
+
+    /** Menu */
+    header .logo-link img {
+        height: 150px;
+        width: 150px;
+    }
+
+    nav {
+        width: 90%;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* width: 100%; */
+    }
+
+    .menu i {
+        font-size: 2rem;
+        color: var(--amarillo);
+    }
+
+    .container-items {
+        order: 1;
+        width: 100%;
+    }
+
+    .item {
+        width: 100%;
+        display: none;
+        justify-content: center;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+        font-weight: var(--bold);
+        font-size: 1.5rem;
+    }
+
+    .item:first-child {
+        margin-top: 30px;
+    }
+
+    .item a {
+        color: var(--amarillo);
+    }
+
+    .menu .logo {
+        width: 15rem;
+    }
+
+    .cart {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    #totalItems {
+        background-color: var(--rojo);
+        color: var(--amarillo);
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+    }
+
+    /* fin menu */
+
+    /* Diseño main page */
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .logo {
+        margin-left: 2rem;
+    }
+
+    /* Diseño cabecera section */
+    .cabecera {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+    }
+
+    .imgCabecera {
+        width: 18rem;
+        border-radius: 1rem;
+    }
+
+    .infoCabecera {
+        font-size: 1.5rem;
+        text-align: center;
+        background: rgb(0, 0, 0);
+        border-radius: 0.8rem;
+        width: 18rem;
+        color: var(--blanco);
+        padding: 1rem;
+    }
+
+    /*fin de cabecera*/
+    /* Diseño buscador pizzas */
+    .search {
+        padding: 2rem 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        height: auto;
+        border-radius: 0.8rem;
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--blanco);
+        font-size: 1.4rem;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .inputSearch {
+        width: 5rem;
+        height: 2rem;
+        border-radius: 0.8rem;
+        background: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        box-shadow: 2px 2px 2px 1px var(--blanco);
+        color: var(--blanco);
+    }
+
+    .inputBtn {
+        width: 5rem;
+        height: 2rem;
+        border: none;
+        border-radius: 0.8rem;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px 1px var(--celeste);
+        margin-left: 0.5rem;
+    }
+
+    .inputBtn:hover {
+        background-color: var(--amarillo);
+        color: var(--rojo);
+    }
+
+    .cartList2 {
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+       justify-content: center;
+       width: 90vw;
+       height: auto;
+       background: rgba(0, 0, 0, 0.6);
+       border-radius: 0.8rem;
+       color: var(--blanco);
+       margin-top: 1rem;
+       padding: 1rem;
+     }
+     .cartList2 h3 {
+       font-size: 0.8rem;
+       width: 100%;
+     }
+
+     .cartList2 span {
+       font-size: 1rem;
+       text-align: center;
+       margin: 1.5rem 0 2rem 0;
+       background-color: var(--rojo);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 0.5rem;
+       border-radius: 1000px;
+     }
+    /*fin buscador*/
+    /*Catalogo*/
+   .catalogo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0 2rem 0;
+    }
+
+    .cardCatalogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        border: solid 1px var(--azul);
+        border-radius: 0.8rem;
+        gap: 1rem;
+        color: var(--blanco);
+        padding: 5px;
+        box-shadow: 1px 1px 1px 1px var(--negro);
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .cardCatalogo:hover {
+        background: rgb(255, 215, 25, 0.8);
+        color: var(--negro);
+        transition: all 0.5s ease;
+        box-shadow: 1px 1px 1px 1px var(--negro);
+    }
+
+    .btnCatalogo {
+        width: 5rem;
+        height: 2rem;
+        background: var(--negro);
+        color: var(--blanco);
+        border: 1px solid var(--blanco);
+        border-radius: 5px;
+        margin: 0.5rem;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px var(--negro);
+    }
+
+    .imgCatalogo {
+        width: 8rem;
+        border-radius: 0.8rem;
+    } 
+
+    .cardCatalogo p{
+       text-align: center;
+       width: 80%;
+       font-size: 1rem;
+    }
+
+    /*fin catalogo*/
+
+   /*contacto*/
+   .contacto {
+       width: 90%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       height: 20rem;
+       background: rgba(0, 0, 0, 0.4);
+       background-size: contain;
+       border-radius: 0.8rem;
+       gap: 1rem;
+       color: var(--blanco);
+       margin: 1rem;
+   }
+
+   .contacto input {
+       width: 20rem;
+       height: 2rem;
+       border-radius: 0.8rem;
+       text-align: center;
+   }
+
+   #enviar{
+      cursor: pointer;
+      color: var(--blanco);
+      background-color: var(--negro);
+   }
+
+   #enviar:hover{
+      background-color: var(--amarillo);
+
+   }
+
+
+   /*footer */
+    .footer {
+        margin-top: 2rem;
+        color: aliceblue;
+        margin-bottom: 1rem;
+    }
+
+
+
+}
+
+
+.error {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 2px 13px;
+    position: relative;
+    right: 0px;
+    top: -50px;
+    border-radius: 10px;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Desktop */
+@media (min-width: 480px) {
+
+    /* header */
+    #header {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        background: var(--rojo);
+        padding: 2rem 0 2rem 0;
+    }
+
+    /*menu */
+
+    nav {
+        width: 90%;
+    }
+
+    #navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        transition: top 0.5s;
+        background-color: var(--rojo);
+        z-index: 3;
+        -webkit-transition: top 0.5s;
+        -moz-transition: top 0.5s;
+        -ms-transition: top 0.5s;
+        -o-transition: top 0.5s;
+    }
+
+    .item-link a {
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+    }
+
+    .item-link a:hover,
+    .item-link a:focus {
+        background-size: 70% 2px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 1rem auto;
+    }
+
+
+    .menu i {
+        font-size: 2rem;
+        color: var(--amarillo);
+    }
+
+
+    .container-items {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 800px;
+    }
+
+
+    .item {
+        width: auto;
+        cursor: pointer;
+        text-transform: uppercase;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+        font-weight: var(--thin);
+        font-size: 1.3rem;
+    }
+
+    .item:first-child {
+        margin: 0;
+    }
+
+    .item a {
+        color: var(--amarillo);
+    }
+
+    .menu .logo {
+        width: 15rem;
+    }
+
+    .cart {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    #totalItems {
+        color: var(--amarillo);
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+    }
+
+    .btn__container {
+        display: none;
+    }
+
+
+    /* Finalizado el menu */
+    /* Diseño main page */
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    /* Diseño Hero section */
+    .cabecera {
+        display: flex;
+        width: 90vw;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 9rem;
+    }
+
+    .imgCabecera {
+        width: 40rem;
+        border-radius: 1rem;
+    }
+
+    .infoCabecera {
+        font-size: 2rem;
+        text-align: center;
+        background: rgb(0, 0, 0);
+        border-radius: 0.8rem;
+        width: 24rem;
+        color: var(--blanco);
+        padding: 2rem;
+    }
+
+    /*Buscador*/
+    .search {
+        padding: 2rem 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+        height: 12rem;
+        border-radius: 0.8rem;
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--blanco);
+        font-size: 1.4rem;
+    }
+
+    .inputSearch {
+        width: 5rem;
+        height: 2rem;
+        border-radius: 0.8rem;
+        background: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        box-shadow: 2px 2px 2px 1px var(--blanco);
+        color: var(--blanco);
+    }
+
+    .inputBtn {
+        width: 5rem;
+        height: 2rem;
+        border: none;
+        border-radius: 0.8rem;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px 1px var(--celeste);
+        margin-left: 0.5rem;
+    }
+
+    .inputBtn:hover {
+        background-color: var(--amarillo);
+        color: var(--rojo);
+    }
+    
+    .cartList2 span {
+       font-size: 1rem;
+       text-align: center;
+       margin: 1.5rem 0 2rem 0;
+       background-color: var(--rojo);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 0.5rem;
+       border-radius: 1000px;
+       cursor: pointer;
+     }
+    /*fin buscador*/
+
+    /* Diseño catalogo pizzas */
+    .catalogo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0 2rem 0;
+    }
+
+    .cardCatalogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        border: solid 1px var(--amarillo);
+        border-radius: 0.8rem;
+        box-shadow: 1px 1px 1px 1px var(--negro);
+        background: rgba(0, 0, 0, 0.8);
+        color: var(--blanco);
+        padding: 0.5rem;
+    }
+   
+    .cardCatalogo:hover {
+        background: rgb(255, 215, 25, 0.8);
+        color: var(--negro);
+        transition: all 0.5s ease;
+        box-shadow: 1px 1px 1px 1px var(--negro);
+    }
+
+    .imgCatalogo {
+        width: 12rem;
+        height: 10rem;
+        border-radius: 0.8rem;
+    }
+
+    .btnCatalogo {
+        width: 5rem;
+        height: 2rem;
+        background: var(--negro);
+        color: var(--blanco);
+        border: 1px solid var(--blanco);
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 1rem;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px var(--negro);
+    } 
+
+    .cardCatalogo p{
+       text-align: center;
+       width: 80%;
+       font-size: 1rem;
+    }
+    /*fin catalogo*/
+    
+    /* Diseño Footer */
+    .footer {
+        margin-top: 2rem;
+        color: aliceblue;
+    }
+
+    .cartList2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 30rem;
+        height: auto;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 0.8rem;
+        color: var(--blanco);
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+
+    .contacto {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 20rem;
+        background: rgba(0, 0, 0, 0.4);
+        background-size: contain;
+        border-radius: 0.8rem;
+        gap: 1rem;
+        color: var(--blanco);
+        margin: 1rem;
+    }
+
+    .contacto input {
+        width: 20rem;
+        height: 2rem;
+        border-radius: 0.8rem;
+        text-align: center;
+    }
+
+    #enviar{
+       cursor: pointer;
+       color: var(--blanco);
+       background-color: var(--negro);
+    }
+
+    #enviar:hover{
+       background-color: var(--amarillo);
+       color: var(--negro);
+       
+    }
+
+}
+
+/*Borrar carrito */
+/* Javascript Clases */
+/* Los items estan con display none */
+.show {
+    display: flex;
+}
+
+/* Errores formulario */
+.errores {
+   color: red;
+ }
+ 
+ .ok {
+   color: greenyellow;
+ }
+
